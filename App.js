@@ -10,7 +10,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.paragraph}>
-        Change code in the editor and  on your phone!.
+        Change code in  on  phone!.
       </Text>
       <Card>
         <AssetExample />
