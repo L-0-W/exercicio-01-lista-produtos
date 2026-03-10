@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "exercicio-01-lista-produtos",
-    "slug": "snack-28e5cb32-34e3-496b-aba1-b39bfa4470d0",
+    "slug": "snack-83e65b99-78f1-4ed5-923a-b6540aeac883",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,7 +20,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
