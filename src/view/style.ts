@@ -1,35 +1,55 @@
 import {StyleSheet} from 'react-native';
 
-const styles = StyleSheet.create({
+const estilos = StyleSheet.create({
   container: {
-    display: "flex"
-  },
-
-  centeredView: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: '#f5f5f5',
   },
-
-  modalView: {
-    margin: 20,
+  headerTitle: {
+    fontWeight: 'bold',
+  },
+  fab: {
+    position: 'absolute',
+    margin: 16,
+    right: 0,
+    bottom: 20,
+    backgroundColor: '#6200ee',
+  },
+  modalContainer: {
     backgroundColor: 'white',
-    padding: 35,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
+    margin: 20,
+    borderRadius: 16,
+    padding: 24,
+    maxHeight: '90%',
   },
-
+  modalTitulo: {
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 8,
+    color: '#333',
+  },
+  divisor: {
+    marginBottom: 16,
+  },
+  input: {
+    marginBottom: 12,
+    backgroundColor: 'white',
+  },
+  row: {
+    flexDirection: 'row',
+  },
+  flex1: {
+    flex: 1,
+  },
+  botoesContainer: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    marginTop: 16,
+    gap: 8,
+  },
   btn: {
-    width: 10,
-    padding: 10,
-  }
-})
+    borderRadius: 8,
+  },
+});
 
-export default styles
+export default estilos

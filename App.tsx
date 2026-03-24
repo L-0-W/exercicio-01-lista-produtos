@@ -4,19 +4,21 @@ import {
   SafeAreaView,
   SafeAreaProvider,
 } from 'react-native-safe-area-context';
-import { Provider } from 'react-native-paper';
+import { PaperProvider } from 'react-native-paper';
+import { NavigationContainer } from '@react-navigation/native';
+import StackNavigator from './src/navigator/StackNavigator';
 
 export default function App() {
   return (
-    <Provider>
+    <PaperProvider>
       <SafeAreaProvider>
-        <SafeAreaView>
-          <View style={styles.container}>
-            <Jogos />
-          </View>
-        </SafeAreaView>
+        <NavigationContainer>
+          <SafeAreaView style={{ flex: 1 }}> 
+            <StackNavigator />
+          </SafeAreaView>
+        </NavigationContainer>
       </SafeAreaProvider>
-    </Provider>
+    </PaperProvider>
   );
 }
 

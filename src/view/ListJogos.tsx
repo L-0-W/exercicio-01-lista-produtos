@@ -12,6 +12,9 @@ import {
   Surface,
   IconButton
 } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParams } from '../navigator/types';
 
 interface ListJogosProps {
   jogos: JogosModel[];
@@ -22,6 +25,8 @@ export default function ListJogos({ jogos, setJogos }: ListJogosProps) {
   const [modalVisivel, setModalVisivel] = useState(false);
   const [jogoEditado, setJogoEditado] = useState<JogosModel | null>(null);
   const [idxEditado, setIdxEditado] = useState<number | null>(null);
+
+  const navigator = useNavigation<NativeStackNavigationProp<RootStackParams, 'Home'>>();
 
   const abrirEdicao = (jogo: JogosModel, idx: number) => {
     setJogoEditado({ ...jogo });
@@ -52,7 +57,7 @@ export default function ListJogos({ jogos, setJogos }: ListJogosProps) {
   };
 
   const renderItem = ({ item, index }: { item: JogosModel; index: number }) => (
-    <Card style={estilos.card} elevation={2}>
+    <Card style={estilos.card} elevation={2} onPress={() => navigator.navigate("JogoDetail", {jogo: item })}>
       {item.image_link ? (
         <Card.Cover source={{ uri: item.image_link }} style={estilos.capa} />
       ) : (
